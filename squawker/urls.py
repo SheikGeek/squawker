@@ -6,7 +6,9 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'squawker.views.current_datetime'),
+    url(r'^$', 'squawker.views.index'),
+    url(r'^logout/$', 'squawker.views.logout'),
+    url(r'^create_user/$', 'squawker.views.create_user'),
     # url(r'^squawker/', include('squawker.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -1,5 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}changed title{% endblock %}
+{% block title %}index - squawker{% endblock %}
 
-{% block body %} It is now {{ now }} {% endblock %}
+{% block body %} 
+
+{% if username %}
+<p>Welcome <b>{{ username }}</b>.</p>
+
+<p><a href='/logout'>Logout</a>
+{% else %}
+
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+
+<form action='.' method='post'>
+{% csrf_token %}
+<label>username:</label> <input type='text' name='username' value=''> <br>
+<label>password:</label> <input type='password' name='password'> <br>
+<input type='submit' name='login button' value='Login'>
+</form>
+
+<p><a href='/create_user'>Or Create a New User</a>
+{% endif %}
+
+{% endblock %}
