@@ -5,10 +5,14 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
+    # squakwer/auth views
     url(r'^$', 'squawker.views.index'),
     url(r'^logout/$', 'squawker.views.logout'),
     url(r'^create_user/$', 'squawker.views.create_user'),
+
+    # message views
+    url(r'^m/create/$', 'messages.views.create_message'),
+    url(r'^m/list/$', 'messages.views.list_messages'),
     # url(r'^squawker/', include('squawker.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

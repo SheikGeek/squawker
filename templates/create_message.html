@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}create message - squawker{% endblock title %}
+
+{% block body %}
+
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+
+<form action='.' method='post'>
+{% csrf_token %}
+<label>message:</label> <input type='text' name='message' size='70' maxlength='140' value=''> <br>
+<input type='submit' name='create message button' value='Create'>
+</form>
+
+{% endblock body %}
