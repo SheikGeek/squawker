@@ -13,10 +13,6 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'squawker.views.logout'),
     url(r'^create_user/$', 'squawker.views.create_user'),
 
-    url(r'^mymedia/(?P<path>.*)$', 'django.views.static.serve',  
-         {'document_root':     settings.MEDIA_ROOT}),
-    #url(r'^css/(?*.css)$', 'django.views.static.serve', {'document_root': '/css/'}),
-
     # message views
     url(r'^m/create/$', 'messages.views.create_message'),
     url(r'^m/list/$', 'messages.views.list_messages'),
