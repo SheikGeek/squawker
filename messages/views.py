@@ -33,6 +33,11 @@ def create_message(request):
 			return render_to_response("create_message.html", context)
 		else:
 			content = request.POST['message']
+			if not content:
+				context = {}
+				context['error'] = "Message cannot be blank. Please try again."
+				context.update(csrf(request))
+				return render_to_response("create_message.html", context)
 			# create the message
 			message = Message(message=content, user_id=user_id)
 			message.save()
