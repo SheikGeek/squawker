@@ -7,9 +7,9 @@
 {% if username %}
 <p>Welcome <b>{{ username }}</b>.</p>
 
-<p><a href='m/list'>List messages</a>
-<p><a href='m/create'>Create a new message</a>
-<p><a href='/logout'>Logout</a>
+<p><a href='m/list/'>List messages</a>
+<p><a href='m/create/'>Create a new message</a>
+<p><a href='/logout/'>Logout</a>
 {% else %}
 
 {% if error %}
@@ -23,8 +23,8 @@
 <input type='submit' name='login button' value='Login'>
 </form>
 
-<p><a href='m/list'>List messages</a>
-<p><a href='/create_user'>Or Create a New User</a>
+<p><a href='m/list/'>List messages</a>
+<p><a href='/create_user/'>Or Create a New User</a>
 {% endif %}
 
 {% endblock %}
