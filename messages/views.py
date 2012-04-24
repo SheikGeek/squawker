@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.template import Context, RequestContext, loader
 
-# custome model imports
+# custom model imports
 from messages.models import Message
 
 # list messages
