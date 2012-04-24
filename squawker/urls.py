@@ -1,4 +1,7 @@
 from django.conf.urls import patterns, include, url
+from squawker import settings
+
+
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -10,9 +13,14 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'squawker.views.logout'),
     url(r'^create_user/$', 'squawker.views.create_user'),
 
+    url(r'^mymedia/(?P<path>.*)$', 'django.views.static.serve',  
+         {'document_root':     settings.MEDIA_ROOT}),
+    #url(r'^css/(?*.css)$', 'django.views.static.serve', {'document_root': '/css/'}),
+
     # message views
     url(r'^m/create/$', 'messages.views.create_message'),
     url(r'^m/list/$', 'messages.views.list_messages'),
+
     # url(r'^squawker/', include('squawker.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
