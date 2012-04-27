@@ -7,7 +7,7 @@
 	<div id="mainPanel">
 
         {% if username %}
-       <div id="loginPanel"><h2>Welcome <b>{{ username }}</b>!</h2></div>
+       <div id="loginPanel"><h2>Welcome {{ username }}!</h2></div>
         <div id="menu">
         	<ul>
    				<li><a onClick='DisplayMessages();'><span>Refresh Messages</span></a></li>
@@ -35,6 +35,7 @@
         	<h2>User Login</h2>
             <form action='.' method='post'>
             {% csrf_token %}
+
             <input type='text' name='username' value='User Name' onfocus="if(this.value=='User Name')this.value=''" onblur="if(this.value=='')this.value='User Name'">
            	<input type='password' name='password' value='Password' onfocus="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'">
             <input type='submit' name='login button' value='Login'>

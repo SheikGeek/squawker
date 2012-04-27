@@ -63,13 +63,13 @@ def create_user(request):
 			context.update(csrf(request))
 			# reload page with error text
 			return render_to_response("create_user.html", context)
-		#elif not password or password_confirm:
-			#context = {}
-			#context['username'] = username
-			#context['error'] = "Password cannot be blank. Please try again."
-			#context.update(csrf(request))
+		elif password == '' or password_confirm == '':
+			context = {}
+			context['username'] = username
+			context['error'] = "Password cannot be blank. Please try again."
+			context.update(csrf(request))
 			# reload page with error text
-			#return render_to_response("create_user.html", context)
+			return render_to_response("create_user.html", context)
 		else:
 			# username was not empty
 			# passwords match, check if username already in use
