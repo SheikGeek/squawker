@@ -11,14 +11,14 @@
         <div id="menu">
         	<ul>
    				<li><a onClick='DisplayMessages();'><span>Refresh Messages</span></a></li>
-        		<li><a href='m/create/'><span>Create a new message</span></a></li>
+        		<li><a id='createMessage' href='/m/create/'><span>Create a new message</span></a></li>
         		<li><a href='/logout/'><span>Logout</span></a></li>
             </ul>
         </div>
         
         <div id="leftPanel">
          	<div class="message">
-          		<h2>Messages</h2><br/><br/><br/><br/><br/><br/><br/><br/><br/>   
+          		<h2></h2><br/><br/><br/><br/><br/><br/><br/><br/><br/>   
          	</div>
          </div>
          <div id="rightPanel">
@@ -35,14 +35,14 @@
         	<h2>User Login</h2>
             <form action='.' method='post'>
             {% csrf_token %}
-            <input type='text' name='username' onfocus="if(this.value=='User Name')this.value=''" onblur="if(this.value=='')this.value='User Name'">&nbsp;&nbsp;
-           	<input type='password' name='password' onfocus="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'">
+            <input type='text' name='username' value='User Name' onfocus="if(this.value=='User Name')this.value=''" onblur="if(this.value=='')this.value='User Name'">
+           	<input type='password' name='password' value='Password' onfocus="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'">
             <input type='submit' name='login button' value='Login'>
             </form>
         </div>
         <div id="menu">
 	        <ul>
-    	    	<li><a href='/create_user/'><span>Create a new account</span></a></li>
+    	    	<li><a id='createUser' href='/create_user/'><span>Create a new account</span></a></li>
             </ul>
         </div>
         <div id="leftPanel">
@@ -60,7 +60,13 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 			DisplayMessages();
+			
+			$("a#createUser").fancybox();
+			$("a#createMessage").fancybox();
+			
+		
 		});
+		
 </script>
 {% endblock %}
 

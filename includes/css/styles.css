@@ -5,7 +5,7 @@ body{margin:0px; padding:0px; background:#fffde4 url(images/bodyBg.jpg) repeat-x
 h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; line-height:10px; text-indent:-9999px; background:url(images/logo.png) no-repeat}
 #loginPanel{width:397px; margin:28px 0 0 0; padding:0 0 0 546px; float:left}
 #loginPanel h2{width:397px; margin:0px; padding:0px; float:left; font-family:Georgia; font-size:27px; color:#497f35; line-height:31px; font-weight:normal}
-#loginPanel input{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px; background:#f9f6d4}
+#loginPanel input{width:175px; height:18px; margin:9px 0 0 5px; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px; background:#f9f6d4}
 #loginPanel .blank{width:25px; height:21px; margin:0px; padding:0px; float:left}
 #loginPanel p{width:253px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
 #loginPanel p a{color:#943415; text-decoration:none}
