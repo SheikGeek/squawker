@@ -9,15 +9,20 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #loginPanel .blank{width:25px; height:21px; margin:0px; padding:0px; float:left}
 #loginPanel p{width:253px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
 #loginPanel p a{color:#943415; text-decoration:none}
+#loginPanel p a:hover{color:#45ada9;}
 #loginPanel .login{width:66px; height:20px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:url(images/loginBg.jpg) no-repeat}
+#loginPanel label{width:150px; margin:10px 20px 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
 
 #leftPanel{width:480px; margin:27px 0 0 0; padding:0 0 0 35px; float:left}
 #leftPanel .message{width:200px; margin:0px; padding:0px; float:left}
 #leftPanel .message h2{width:200px; margin:30px 0 0 0; padding:0px; float:left; font-family:Georgia; font-size:24px; color:#2c787b; line-height:28px; font-weight:normal}
 
-#rightPanel{width:300px; height: 200px; margin:75px 0 0 0; padding:0 0 20px 36px; float:left;  overflow: hidden; }
+#rightPanel{width:300px; margin:10px 0 0 0; padding:0 0 20px 36px; float:left;  overflow: hidden; }
+#addMessage{margin:0 0 10px 0;}
 #rightPanel  h3{width:300px;  margin:0px; padding:0px; float:left; font-family:Georgia; font-size:24px; color:#0b636b; line-height:28px; font-weight:normal}
-#rightPanel .view{width:250px; height: 200px; margin:3px 2px 0 0; padding:0 0 0 15px; float:left; font-family:Arial; font-size:11px; color:#943415; background-color:#fffde4; font-weight:bold; overflow-y: hidden;}
+#rightPanel .view{width:250px;  margin:3px 2px 0 0; padding:0 0 0 15px; float:left; font-family:Arial; font-size:11px; color:#943415; background-color:#fffde4; font-weight:bold; overflow-y: hidden;}
+#rightPanel label{width:20px; margin:10px 20px 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
+
 
 #footPanel {width:923px; margin:0px; padding:25px 0 29px 0; float:left; background:url(images/footbg.jpg) no-repeat center top}
 #footPanel .nav{width:923px; margin:0px; padding:0px; float:left}
@@ -33,6 +38,7 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #footPanel .validation ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
 #footPanel .validation ul li .blank{width:6px; height:17px; margin:0px; padding:0px; float:left}
 #footPanel .validation ul li a{width:66px; height:17px; margin:0px; padding:0px; float:left; font-family:Arial; font-size:10px; font-weight:bold; color:#943415; line-height:16px; text-align:center; text-decoration:none; background:url(images/validationBg.jpg) no-repeat}
+
 #menu{width:990px; margin:32px 0 0 0; padding:0px; float:left}
 #menu ul{width:450px; margin:0px; padding:0px; float:right; display:block}
 #menu ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
@@ -41,6 +47,8 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #menu ul li a span{width:auto; height:16px; margin:0px; padding:2px 8px 0 8px; float:left; cursor:pointer}
 #menu ul li a:hover span{background:url(images/leftCurve.jpg) no-repeat left}
 #menu ul li .blank{width:1px; height:18px; margin:0px; padding:0 5px 0 5px; float:left; background:url(images/mBlank.jpg) no-repeat center top}
+
+#errorMessage{width: 200px; position:relative; margin-left: 500px;}
 
 
 

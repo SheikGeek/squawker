@@ -3,16 +3,28 @@
 {% block title %}create user - squawker{% endblock title %}
 
 {% block body %}
-
+<div id="mainWrap">
+	<div id="mainPanel">
 {% if error %}
 <p>{{ error }}</p>
 {% endif %}
-
-<form action='.' method='post'>
+<div id="loginPanel">
+<h2>Create A User</h2>
+<form action='/create_user/' method='post'>
 {% csrf_token %}
-<label>username:</label> <input type='text' name='username' value='{{ username }}'> <br>
+<label>username:</label> <input type='text' name='username' value='{{ username }}'> <br />
 <label>password:</label> <input type='password' name='password' value=''> <br>
 <label>confirm password:</label> <input type='password' name='password_confirm' value=''> <br>
 <input type='submit' name='create user button' value='Create'>
-</form>
+</form><br/>
+<p><a href='../'>Go Back To The Homepage</a></p>
+</div>
+        <div id="leftPanel">
+         	
+         </div>
+         <div id="rightPanel">
+         </div>
+</div>
+</div>
+
 {% endblock body %}

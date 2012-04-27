@@ -11,7 +11,6 @@
         <div id="menu">
         	<ul>
    				<li><a onClick='DisplayMessages();'><span>Refresh Messages</span></a></li>
-        		<li><a id='createMessage' href='/m/create/'><span>Create a new message</span></a></li>
         		<li><a href='/logout/'><span>Logout</span></a></li>
             </ul>
         </div>
@@ -22,13 +21,15 @@
          	</div>
          </div>
          <div id="rightPanel">
+         	<div id='addMessage'></div>
          	<h3>Most Recent Squawks</h3>
+            
          	<div id="messagePane"></div> 
          </div>
         {% else %}
         
         {% if error %}
-        <p>{{ error }}</p>
+        <div id='errorMessage'>{{ error }}</div>
         {% endif %}
       
         <div id="loginPanel">
@@ -61,10 +62,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 			DisplayMessages();
-			
-			$("a#createUser").fancybox();
-			$("a#createMessage").fancybox();
-			
+			AddMessages();
 		
 		});
 		

@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 
 <head>
      <link rel="stylesheet" type="text/css" href="{% block css_path %}/static/css/styles.css{% endblock %}" />
@@ -25,11 +26,12 @@
 			});
 		}
 		
-		$("#rightView").bind("mousewheel", function (ev, delta) {
-    		var scrollTop = $(window).scrollTop();
-    		$(window).scrollTop(scrollTop - Math.round(delta * 20));
-		});
-	
+		function AddMessages(){
+			$.get('m/create/', function( data ) {
+					$( "#addMessage" ).empty().append( data );
+			});
+		}
+		
 	 </script>
 	<title>{% block title %}squawker{% endblock %}</title>
 </head>

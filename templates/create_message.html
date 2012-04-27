@@ -8,9 +8,10 @@
 <p>{{ error }}</p>
 {% endif %}
 
-<form action='.' method='post'>
+<form action='/m/create/' method='post'>
 {% csrf_token %}
 <label>message:</label> <input type='text' name='message' size='70' maxlength='140' value=''> <br>
 <input type='submit' name='create message button' value='Create'>
 </form>
+
 {% endblock body %}
