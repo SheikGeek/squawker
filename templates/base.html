@@ -3,6 +3,30 @@
 
 <head>
      <link rel="stylesheet" type="text/css" href="{% block css_path %}/static/css/styles.css{% endblock %}" />
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+     <script type="text/javascript">
+	 	function Login(user, pass) {
+		  //Check if user is valid
+		
+		  //Load the main page
+		  $.post('textScroller.py', { u: user, p:pass }, function( data ) {
+				  $( "#mainContent" ).empty().append( data );
+			});
+		}
+		
+			
+		function DisplayMessages(){
+			$.get('m/list/', function( data ) {
+					$( "#messagePane" ).empty().append( data );
+			});
+		}
+		
+		$("#rightView").bind("mousewheel", function (ev, delta) {
+    		var scrollTop = $(window).scrollTop();
+    		$(window).scrollTop(scrollTop - Math.round(delta * 20));
+		});
+	
+	 </script>
 	<title>{% block title %}squawker{% endblock %}</title>
 </head>
 

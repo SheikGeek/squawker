@@ -3,28 +3,64 @@
 {% block title %}index - squawker{% endblock %}
 
 {% block body %} 
+<div id="mainWrap">
+	<div id="mainPanel">
 
-{% if username %}
-<p>Welcome <b>{{ username }}</b>.</p>
+        {% if username %}
+       <div id="loginPanel"><h2>Welcome <b>{{ username }}</b>!</h2></div>
+        <div id="menu">
+        	<ul>
+   				<li><a onClick='DisplayMessages();'><span>Refresh Messages</span></a></li>
+        		<li><a href='m/create/'><span>Create a new message</span></a></li>
+        		<li><a href='/logout/'><span>Logout</span></a></li>
+            </ul>
+        </div>
+        
+        <div id="leftPanel">
+         	<div class="message">
+          		<h2>Messages</h2><br/><br/><br/><br/><br/><br/><br/><br/><br/>   
+         	</div>
+         </div>
+         <div id="rightPanel">
+         	<h3>Most Recent Squawks</h3>
+         	<div id="messagePane"></div> 
+         </div>
+        {% else %}
+        
+        {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
+      
+        <div id="loginPanel">
+        	<h2>User Login</h2>
+            <form action='.' method='post'>
+            {% csrf_token %}
+            <input type='text' name='username' onfocus="if(this.value=='User Name')this.value=''" onblur="if(this.value=='')this.value='User Name'">&nbsp;&nbsp;
+           	<input type='password' name='password' onfocus="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'">
+            <input type='submit' name='login button' value='Login'>
+            </form>
+        </div>
+        <div id="menu">
+	        <ul>
+    	    	<li><a href='/create_user/'><span>Create a new account</span></a></li>
+            </ul>
+        </div>
+        <div id="leftPanel">
+         	
+         </div>
+         <div id="rightPanel">
+         </div>
+        {% endif %}
+        
+         
+        
+	</div>
+</div>
 
-<p><a href='m/list/'>List messages</a>
-<p><a href='m/create/'>Create a new message</a>
-<p><a href='/logout/'>Logout</a>
-{% else %}
-
-{% if error %}
-<p>{{ error }}</p>
-{% endif %}
-
-<form action='.' method='post'>
-{% csrf_token %}
-<label>username:</label> <input type='text' name='username' value=''> <br>
-<label>password:</label> <input type='password' name='password'> <br>
-<input type='submit' name='login button' value='Login'>
-</form>
-
-<p><a href='m/list/'>List messages</a>
-<p><a href='/create_user/'>Or Create a New User</a>
-{% endif %}
-
+<script type="text/javascript">
+	$(document).ready(function(){
+			DisplayMessages();
+		});
+</script>
 {% endblock %}
+

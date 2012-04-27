@@ -7,13 +7,13 @@ function Login(user, pass) {
     });
 }
 
-function UpdateTextScroller(user, msg, time) {
+function DisplayTextScroller(user, msg, time) {
   //Do db work in python
   //post data with js
   //will have to add A LOT MORE logic to this
 
-  $.post('message.py', { u: user, m: msg, t: time }, function( data ) {
-          $( "#textScroller" ).append( data );
+  $.post('list_messages.html', { u: user, m: msg, t: time }, function( data ) {
+          $( "#messagePane" ).append( data );
     });
   
 }
