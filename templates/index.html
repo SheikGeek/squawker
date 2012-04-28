@@ -21,16 +21,19 @@
          	</div>
          </div>
          <div id="rightPanel">
-         	<div id='addMessage'></div>
+			<form action='/m/create/' method='post'>
+			{% csrf_token %}
+			<label>message:</label> <input type='text' name='message' size='70' maxlength='140' value=''> <br>
+			<input type='submit' name='create message button' value='Create'>
+			</form>
          	<h3>Most Recent Squawks</h3>
             
          	<div id="messagePane"></div> 
          </div>
         {% else %}
-        
+
         {% if error %}
         <div id='errorMessage'><strong>{{ error }}</strong></div>
-
         {% endif %}
       
         <div id="loginPanel">

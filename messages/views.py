@@ -30,13 +30,21 @@ def create_message(request):
 		if request.method == "GET":
 			context = {}
 			context.update(csrf(request))
+			if user_id:
+				user = User.objects.get(id=user_id)	
+				username = user.username
+				context['username'] = username
 			return render_to_response("create_message.html", context)
 		else:
-			content = request.POST['message']
-			if not content:
+			content = request.POST['message'].strip()
+			if content == '':
 				context = {}
 				context['error'] = "Message cannot be blank. Please try again."
 				context.update(csrf(request))
+				if user_id:
+					user = User.objects.get(id=user_id)	
+					username = user.username
+					context['username'] = username
 				return render_to_response("create_message.html", context)
 			# create the message
 			message = Message(message=content, user_id=user_id)

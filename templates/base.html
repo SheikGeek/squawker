@@ -21,13 +21,13 @@
 		
 			
 		function DisplayMessages(){
-			$.get('m/list/', function( data ) {
+			$.get('/m/list/', function( data ) {
 					$( "#messagePane" ).empty().append( data );
 			});
 		}
 		
 		function AddMessages(){
-			$.get('m/create/', function( data ) {
+			$.get('/m/create/', function( data ) {
 					$( "#addMessage" ).empty().append( data );
 			});
 		}

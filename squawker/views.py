@@ -47,8 +47,8 @@ def create_user(request):
 		return render_to_response("create_user.html", context)
 	else:
 		username = request.POST['username']
-		password = request.POST['password']
-		password_confirm = request.POST['password_confirm']
+		password = request.POST['password'].strip()
+		password_confirm = request.POST['password_confirm'].strip()
 
 		if password != password_confirm:
 			context = {}
