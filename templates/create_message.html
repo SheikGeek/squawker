@@ -3,15 +3,27 @@
 {% block title %}create message - squawker{% endblock title %}
 
 {% block body %}
-
+<div id="mainWrap">
+	<div id="mainPanel">
 {% if error %}
 <div id='errorMessage'><strong>{{ error }}</strong></div>
 {% endif %}
-
+<div id="loginPanel">
+<h2>Create A User</h2>
 <form action='/m/create/' method='post'>
 {% csrf_token %}
 <label>message:</label> <input type='text' name='message' size='70' maxlength='140' value=''> <br>
 <input type='submit' name='create message button' value='Create'>
 </form>
+
+<p><a href='../'>Go Back To The Homepage</a></p>
+</div>
+        <div id="leftPanel">
+         	
+         </div>
+         <div id="rightPanel">
+         </div>
+</div>
+</div>
 
 {% endblock body %}
