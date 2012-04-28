@@ -8,7 +8,7 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #loginPanel input{width:175px; height:18px; margin:9px 0 0 5px; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px; background:#f9f6d4}
 #loginPanel .blank{width:25px; height:21px; margin:0px; padding:0px; float:left}
 #loginPanel p{width:253px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
-#loginPanel p a{color:#943415; text-decoration:none}
+#loginPanel p a{color:#128a86; text-decoration:none}
 #loginPanel p a:hover{color:#45ada9;}
 #loginPanel .login{width:66px; height:20px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:url(images/loginBg.jpg) no-repeat}
 #loginPanel label{width:150px; margin:10px 20px 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
@@ -48,7 +48,7 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #menu ul li a:hover span{background:url(images/leftCurve.jpg) no-repeat left}
 #menu ul li .blank{width:1px; height:18px; margin:0px; padding:0 5px 0 5px; float:left; background:url(images/mBlank.jpg) no-repeat center top}
 
-#errorMessage{width: 200px; position:relative; margin-left: 500px;}
+#errorMessage{width: 400px; position:relative; margin-left: 545px; margin-top: 20px; color:#943415;}
 
 
 

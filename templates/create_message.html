@@ -5,7 +5,7 @@
 {% block body %}
 
 {% if error %}
-<p>{{ error }}</p>
+<div id='errorMessage'><strong>{{ error }}</strong></div>
 {% endif %}
 
 <form action='/m/create/' method='post'>
